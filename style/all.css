@@ -12141,8 +12141,24 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-header {
+.header {
   height: 627px;
   background-size: cover;
   background-position: bottom center;
+}
+
+.scheme-btn {
+  color: black;
+}
+.scheme-btn.active {
+  color: white;
+  background-color: #0dcaf0;
+}
+
+.color-333333 {
+  color: #333333;
+}
+
+.color-424242 {
+  color: #424242;
 }/*# sourceMappingURL=all.css.map */

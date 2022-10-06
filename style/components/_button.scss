@@ -1,0 +1,8 @@
+.scheme-btn{
+    color: black;
+
+    &.active{
+        color: white;
+        background-color: $info;
+    }
+}
