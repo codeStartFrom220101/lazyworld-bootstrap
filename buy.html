@@ -62,21 +62,21 @@
             <h2 class="h4 ms-2 mb-0 col-12 border-start border-3 border-info">選擇方案</h2>
 
             <div class="col-12 mb-3">
-              <div class="row g-1">
+              <div class="row g-1" id="schemes">
                 <div class="col-lg-4">
-                  <button type="button" class="btn btn-outline-info w-100 fw-bold scheme-btn">
+                  <button type="button" class="btn btn-outline-info w-100 fw-bold scheme-btn" data-scheme="小小搭懶蟲">
                     小小搭懶蟲<br>
                     NT 298/月
                   </button>
                 </div>
                 <div class="col-lg-4">
-                  <button type="button" class="btn btn-outline-info w-100 fw-bold scheme-btn">
+                  <button type="button" class="btn btn-outline-info w-100 fw-bold scheme-btn" data-scheme="睡一整天囉">
                     睡一整天囉<br>
                     NT 666/月
                   </button>
                 </div>
                 <div class="col-lg-4">
-                  <button type="button" class="btn btn-outline-info w-100 fw-bold scheme-btn active">
+                  <button type="button" class="btn btn-outline-info w-100 fw-bold scheme-btn" data-scheme="客製化方案">
                     客製化方案<br>
                     客服詢價
                   </button>
@@ -86,40 +86,59 @@
 
             <h2 class="h4 ms-2 mb-0 col-12 border-start border-3 border-info">填寫資料</h2>
 
-            <form action="#" class="col-12 color-333333">
+            <form action="#" class="col-12 color-333333 needs-validation" novalidate>
               <div class="row g-2">
                 <div class="col-lg-6">
                   <label class="mb-1 d-block" for="last-name">名字</label>
-                  <input type="text" id="last-name" class="form-control">
+                  <input type="text" id="last-name" class="form-control" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
                 </div>
                 <div class="col-lg-6">
                   <label class="mb-1 d-block" for="first-name">姓氏</label>
-                  <input type="text" id="first-name" class="form-control">
+                  <input type="text" id="first-name" class="form-control" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
                 </div>
 
                 <div class="col-12">
                   <label class="mb-1 d-block" for="phone">電話</label>
-                  <input type="tel" id="phone" class="form-control">
+                  <input type="tel" id="phone" class="form-control" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
                 </div>
 
                 <div class="col-12">
                   <label class="mb-1 d-block" for="email">電子郵件</label>
-                  <input type="email" id="email" class="form-control">
+                  <input type="email" id="email" class="form-control" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
                 </div>
 
                 <div class="col-12">
                   <label class="mb-1 d-block" for="address">住址</label>
-                  <input type="address" id="address" class="form-control">
+                  <input type="address" id="address" class="form-control" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
                 </div>
 
                 <div class="col-12">
                   <label class="mb-1 d-block" for="contact-time">方便聯繫時間</label>
-                  <select name="" id="contact-time" class="form-select">
-                    <option selected>12:00 ~ 17:59</option>
-                    <option value="1">18:00 ~ 23:59</option>
-                    <option value="2">00:00 ~ 05:59</option>
-                    <option value="3">06:00 ~ 11:59</option>
+                  <select name="" id="contact-time" class="form-select" required>
+                    <option selected disabled value="">請選擇時段</option>
+                    <option value="1">12:00 ~ 17:59</option>
+                    <option value="2">18:00 ~ 23:59</option>
+                    <option value="3">00:00 ~ 05:59</option>
+                    <option value="4">06:00 ~ 11:59</option>
                   </select>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
                 </div>
 
                 <div class="col-12">
@@ -134,7 +153,10 @@
 
                 <div class="col-12 mb-3">
                   <label class="mb-1" for="say-something">備註說明</label>
-                  <textarea class="form-control" style="resize: none;" id="say-something" rows="3"></textarea>
+                  <textarea class="form-control" style="resize: none;" id="say-something" rows="3" required></textarea>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
                 </div>
 
                 <div class="col-12">
@@ -192,6 +214,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
   </script>
+  <script src="./javascript/all.js"></script>
 
 </body>
 
